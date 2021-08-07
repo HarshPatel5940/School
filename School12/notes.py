@@ -1,5 +1,5 @@
-
 from timeit import default_timer as timer
+
 start = timer()
 
 # File Handling
@@ -14,7 +14,7 @@ General Methods:
     .readline()                   used to read and return a single line
     .readlines()                  used to read and get multiple lines in a list
     .writeline()                  used to write a single line
-    .writelines()                 used to wite multiple lines with new line charechtor (\n)
+    .writelines()                 used to write multiple lines with new line character (\n)
     .flush()                      to ensure the data is saved
 
 Binary: (import pickle)
@@ -35,7 +35,7 @@ csv: (import csv)
     ###
 
 """
-#Functions, error handling & Importing
+# Functions, error handling & Importing
 """
 Importing:
     import <module>                     used to import whole module
@@ -80,7 +80,6 @@ Methods:
     .del()                         to delete whole list
  list(my_list)                     is also used to copy original list
 """
-
 
 # TUPLES
 """
@@ -144,8 +143,7 @@ print(my_dict)
 print(my_dict_2)
 
 my_dict_3 = {3: 9, 4: 16, 5: 25}
-print(my_dict_3[3]) # To Call out a value u cannot use index values u should use the key
-
+print(my_dict_3[3])  # To Call out a value u cannot use index values u should use the key
 
 # SETS
 """
@@ -161,14 +159,14 @@ print(my_dict_3[3]) # To Call out a value u cannot use index values u should use
     set1.issubset(set2)               to check wether it is a sub set or not
 """
 my_set = {"hello", "how", "are", "you"}
-my_set2 =set("hello")
+my_set2 = set("hello")
 print(my_set, my_set2)
 
 my_set3 = {1, 2, 3, 4, 6, 7}
 for i in my_set3:
     print(i)
 
-#///////////////////////////////////////// STRINGS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+# ///////////////////////////////////////// STRINGS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 """
     .split("")                         to split the string 
     ' '.join("")                       to join elements of a string (concatenate)
@@ -178,51 +176,51 @@ for i in my_set3:
 """
 # STRING FORMAT METHOD WITH EXAMPLES
 
-#------ old formatting style ("  %s/d/f" %s/f/d) ----------
+# ------ old formatting style ("  %s/d/f" %s/f/d) ----------
 
-var  = "Tom"
-my_string1 = "the variable is %s" % var # %s represents string
+var = "Tom"
+my_string1 = "the variable is %s" % var  # %s represents string
 print(my_string1)
 
 var = 3.76168
-my_string2 = "the variable is %d" % var # %d represents integer
+my_string2 = "the variable is %d" % var  # %d represents integer
 print(my_string2)
 
-my_string3 = "the variable is %f" % var # %f represents Float Values
+my_string3 = "the variable is %f" % var  # %f represents Float Values
 print(my_string3)
 
 my_string4 = "the variable is %.2f" % var  # %.nf represents n Float Values to be considered
 print(my_string4)
 
 # new (not efficiant) Formatting Style [.format() method)]
-var  = 3.124567
+var = 3.124567
 var2 = 6.1193
 
-my_string5 = "the variable is {}".format(var) 
+my_string5 = "the variable is {}".format(var)
 print(my_string5)
 
 my_string6 = "the variable is {:.3f} and {}".format(var, var2)
 print(my_string6)
 
-#- new formating style (f-strings method) 
+# - new formating style (f-strings method)
 
-var  = 3.124567
+var = 3.124567
 var2 = 6.1193
 my_string7 = f"the variable is {var:.2f} and {var2}"
 print(my_string7)
 
-
 # /////////////////////////////////// Collections \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-#------------------- Counter ------------
+# ------------------- Counter ------------
 from collections import Counter
+
 a = 'aaaaaabbbbbbbbbbbbbbbbcccccccccc'
 my_counter = Counter(a)
 print(my_counter)
-print(my_counter.most_common(1)) # here 1 represents no. of most common elements
+print(my_counter.most_common(1))  # here 1 represents no. of most common elements
 print(list(my_counter.elements()))
 
-#------------- Namedtuple ------
+# ------------- Namedtuple ------
 from collections import namedtuple
 
 point1 = namedtuple("point", "x,y")
@@ -230,7 +228,7 @@ pt = point1(34, -135)
 print(pt)
 print(pt.x, pt.y)
 
-#----------- deque ----------
+# ----------- deque ----------
 from collections import deque
 
 d = deque()
@@ -243,11 +241,11 @@ d.clear()
 d.extend([1, 6, 4, 3, 2, 9, 8, 7, 6, 5])
 d.extendleft([23, 45, 65, 61])
 n1 = 5
-d.rotate(n1) # This will roatate n elements right sied
+d.rotate(n1)  # This will roatate n elements right sied
 # while rotating n can also be = -n for rotating left side
 print(d)
 
-#itertools did not learn
+# itertools did not learn
 
 stop = timer()
-print(stop-start) #to check time
+print(stop - start)  # to check time
