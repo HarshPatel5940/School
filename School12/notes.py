@@ -39,7 +39,7 @@ csv: (import csv)
 """
 Importing:
     import <module>                     used to import whole module
-    from <module> import <function>     used to import specific functions fromt the module
+    from <module> import <function>     used to import specific functions from the module
     <module/function> as <var>          used to give aliases name to the module or functions
 
 Functions:
@@ -48,20 +48,20 @@ Functions:
         def <fnc_name>(parameters):      used to define any function with parameters
         <fnc_name>(arguments)            used to Call Your Function with arguements
 
-        return a                         used to return a singline value
+        return a                         used to return a single line value
         return a,b                       used to return multiple values
 
-    from <filename> import <function>    Used to import functions from a specfic file 
+    from <filename> import <function>    Used to import functions from a specific file 
     from file import <function> as <var> used to give aliases name to the module or functions
     from file import fnc1, fnc2 , fnc3   used to import multiple functions
 
 Error Handling:
-    We can reduce Most of the errors by error handling one of the comman error handlers are try/except
+    We can reduce Most of the errors by error handling one of the common error handlers are try/except
 
     try:
-        ur code block                   # try exectuing code
+        ur code block                   # try executing code
     except <error>:
-        do the neccasry things          # if "try" code causes error instead of raising it do this code
+        do the necessary things          # if "try" code causes error instead of raising it do this code
 
     Note : if you don't specify <error> in except then it will consider all errors for it
 """
@@ -84,16 +84,16 @@ Methods:
 # TUPLES
 """
 Methods:
-    tuple(list)     to conver list to tuple
+    tuple(list)     to convert list to tuple
     .count()        to count the value
     .index()        to give the index of the value
 
---> Note :  We can concatinate tuples other operations are not allowed
+--> Note :  We can concatenate tuples other operations are not allowed
 
     tuple is an immutable object...it takes less space than list and also less time to run.
     tuple helps us when handling large data bases by python
 """
-my_tuple = tuple([9, "damodaran street", "kellys", "chennai", 6, 0, 0, 0, 1, 0])
+my_tuple = tuple([9, "Damodaran street", "kellys", "chennai", 6, 0, 0, 0, 1, 0])
 print(my_tuple[1:3])
 print(my_tuple[0:6:2])
 print(my_tuple[::2])
@@ -107,7 +107,7 @@ Methods:
     my_dict["email"] = "ABc@xYZ.com"       to add new values to dictionary and also to overwrite existing values
     del my_dict["name"]                    to delete existing values
     my_dict.pop("age")                     to delete existing values too
-    dic1.update(dic2)                      to Conacatinate 2 dictionaries
+    dic1.update(dic2)                      to Concatenate 2 dictionaries
     .keys()                                to get all the keys in dictionary
     .values()                              to get all the Values in dictionary
     .items()                               to get all the Items in dictionary
@@ -155,8 +155,8 @@ print(my_dict_3[3])  # To Call out a value u cannot use index values u should us
     set1.union(set2)                  to combine two sets
     set1.intersection(set2)           to get the common between two sets
     set1.difference(set2)             to get difference between the sets 
-    set1.issuperset(set2)             to check wether it is a super set or not 
-    set1.issubset(set2)               to check wether it is a sub set or not
+    set1.issuperset(set2)             to check it is a super set or not 
+    set1.issubset(set2)               to check it is a sub set or not
 """
 my_set = {"hello", "how", "are", "you"}
 my_set2 = set("hello")
@@ -241,7 +241,7 @@ d.clear()
 d.extend([1, 6, 4, 3, 2, 9, 8, 7, 6, 5])
 d.extendleft([23, 45, 65, 61])
 n1 = 5
-d.rotate(n1)  # This will roatate n elements right sied
+d.rotate(n1)  # This will rotate n elements right sied
 # while rotating n can also be = -n for rotating left side
 print(d)
 
