@@ -33,12 +33,16 @@ def file_find_same(sal):
 
 def file_show():
     f1 = open(file_path, "rb")
+    counter = 0
     try:
         while True:
             data1 = pickle.load(f1)
+            counter += 1
             if data1["salary"] >= 0:
+
                 print("==> ", data1["Name"], "-", data1["salary"])
     except EOFError:
+        print(f"Number of people in DB are {counter}!!")
         f1.close()
 
 
@@ -66,7 +70,7 @@ while True:
     else:
         print("Invalid Option")
         pass
-    Ask_2 = input("=> [y] = yes\n=> [n] = no\nWould you like to continue? : ")
+    Ask_2 = input("Would you like to continue? [y] [n] : ")
 
     if Ask_2.lower() == "n":
         break
