@@ -7,21 +7,4 @@ def find_all():
     for row in reader:
         print(row)
 
-
-def find_by_number():
-    print("did not do anything yet")
-
-
-def find_by_name():
-    print("did not do anything yet")
-
-
-def find_by_marks():
-    print("did not do anything yet")
-
-
-def get_help():
-    print("did not do anything yet")
-
-
 find_all()
