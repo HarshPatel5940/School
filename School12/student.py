@@ -7,4 +7,5 @@ def find_all():
     for row in reader:
         print(row)
 
+
 find_all()
