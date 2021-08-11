@@ -110,7 +110,7 @@ while True:
             print("invalid option")
     else:
         print("Invalid Option")
-        pass
+
     Ask_2 = input("Would you like to continue? [y] [n] : ")
 
     if Ask_2.lower() == "n":
