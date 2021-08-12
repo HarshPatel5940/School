@@ -6,7 +6,7 @@ file_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\School12\studen
 def find_all():
     f1 = open(file_path, "rb")
     counter = 0
-    print('========================= see below =============================\n')
+    print('======================================================\n')
     try:
         while True:
             data1 = pickle.load(f1)
@@ -14,13 +14,13 @@ def find_all():
             if data1["marks"] >= 0:
                 print(data1["roll_no"], '-', data1["name"], "-", data1["marks"])
     except EOFError:
-        print(f"Number of students are {counter}!!")
+        print(f"Number of students are **{counter}**")
         f1.close()
 
 
 def find_by_roll_number(number1):
     f1 = open(file_path, "rb")
-    print('========================= see below =============================\n')
+    print('======================================================\n')
     try:
         while True:
             data1 = pickle.load(f1)
@@ -32,7 +32,7 @@ def find_by_roll_number(number1):
 
 def find_by_name(name):
     f1 = open(file_path, "rb")
-    print('========================= see below =============================\n')
+    print('======================================================\n')
     try:
         while True:
             data1 = pickle.load(f1)
@@ -44,7 +44,7 @@ def find_by_name(name):
 
 def find_by_marks(marks):
     f1 = open(file_path, "rb")
-    print('========================= see below =============================\n')
+    print('======================================================\n')
     try:
         while True:
             data1 = pickle.load(f1)
@@ -58,7 +58,7 @@ def file_write(no):
     file = open(file_path, 'ab')
     n1 = 1
     while n1 <= no:
-        print(f'==================== enter Student {n1} =========================\n')
+        print(f'Student {n1} \n')
         name1 = input("enter your name : ")
         try:
             roll_no = int(input("enter your roll_no : "))
@@ -74,7 +74,7 @@ def file_write(no):
 
 
 while True:
-    print("==================================== NEW EXECUTION ====================================\n")
+    print("\n ===> NEW LOOP <==\n")
     Ask_action = input("==> [r] = read\n=> [w]= write\nWhat do you want to do? [r] or [a] : ")
 
     if Ask_action.lower() == "w":
