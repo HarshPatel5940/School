@@ -24,16 +24,27 @@ Binary: (import pickle)
 csv: (import csv)
     f=open("<file name>","r")      #open first before reader
     .reader(f)                     used to read whole CSV file
-    .writerow(row)                 used to write a single row or coloum name
+    .writer(f)                     used as writer
+    .writerow(row)                 used to write a single row or column name
     .writerows(list_row)           used to write multiple rows using nested list
 
-    ### example : 
-        csv_read = <filename>.reader()
-        for row in csv_read:
-            if row[index] == "find something here":
-                print(row)
-    ###
-
+example :
+    file1 = open(file_path, 'a', newline='')
+    writer = csv.writer(file1)
+    n1 = 1
+    try:
+        while n1 <= count:
+            print(f"student {n1}\n")
+            roll_no = int(input("enter students roll no : "))
+            name = input("enter your name : ")
+            marks = input("enter your marks : ")
+            row = [roll_no, name, marks]
+            writer.writerow(row)
+            print("done")
+            n1 += 1
+    except ValueError:
+        print("There was a Value error")
+    
 """
 # Functions, error handling & Importing
 """
