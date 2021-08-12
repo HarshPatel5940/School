@@ -1,6 +1,10 @@
 # School
-A Repository to keep a track of my School projects
+### A Repository to keep a track of my School projects
 
+### Hello World 👋
 
-My Old Repository was deleted cause it had 180 commits and various commits conatining *important tokents & data* which was becoming harder to maintain. 
-So I decided to make seperate repo for all my projects which will also help me in keeping track of projects seprately in a clean way.
+>[![](https://img.shields.io/static/v1?label=HARSHPATEL&logo=github&message=Follow&color=orange)](https://github.com/HarshPatel5940)
+>[![](https://img.shields.io/static/v1?label=MyDiscordServer&logo=Discord&message=JoinNow&color=cyan)](https://discord.gg/WFVB3k5Dfq)
+>[![](https://img.shields.io/static/v1?label=HARSHPATEL&logo=twitter&message=Follow&color=blue)](https://twitter.com/intent/follow?screen_name=HarshPatelN1)
+>[![](https://img.shields.io/static/v1?label=Fiver&logo=youtube&message=Follow&color=lime)](https://www.fiverr.com/share/r90egx)
+
