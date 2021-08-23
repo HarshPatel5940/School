@@ -21,12 +21,12 @@ while True:
             print("=========== Data Inserter/Creater ===========")
             opt4 = int(input("Select The Task you Wanna Perform:\n1)Insert Data Into A File\n2)Create A File\nYour Option [1]or[2]: "))
             if opt4 == 1:
-                appname = input("Enter the App Name For Which You Wanna Insert The Data(in lower case): ")
-                Modules.datainserter(id1, appname)
+                app_name = input("Enter the App Name For Which You Wanna Insert The Data(in lower case): ")
+                Modules.datainserter(id1, app_name)
             elif opt4 == 2:
                 print("Note: Only CSV Files Are Created")
-                appname = input("Enter the App Name For Which You Wanna Create Data(in lower case): ")
-                Modules.csvfilecreate(id1, appname)
+                app_name = input("Enter the App Name For Which You Wanna Create Data(in lower case): ")
+                Modules.csvfilecreate(id1, app_name)
             opt5 = int(input("Select The Task you Wanna Perform:\n1) Run 'Data Inserter/Creater' Again\n2) Exit 'Data Inserter/Creater'\nYour Option [1]or[2]: "))
             if opt5 == 1:
                 continue

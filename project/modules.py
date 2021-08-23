@@ -1,8 +1,8 @@
 import csv
-file_path = "Usagetrackerproject/userdata.csv"
+file_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data.csv"
 
 
-def write_user(id1,name,password):
+def write_user(id1, name, password):
     with open(file_path, "a", newline="") as f:
         print("Data is ok")
         file = csv.writer(f)

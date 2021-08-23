@@ -16,7 +16,6 @@ def login():
     while True:
         f = open("registry.csv", 'r')
         id1 = input("Enter Your ID: ")
-        name = input("Enter your Name: ")
         password = input("Enter Your Password: ")
         fr = csv.reader(f)
         auth = False
