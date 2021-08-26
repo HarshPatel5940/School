@@ -59,9 +59,9 @@ def app_data_read(id1, app_name):
         file_reader = csv.reader(file_open)
         opt = input(
             "Select The Task\n1) Read Full Data\n2) Read Particular Week\nYour Option [1]or[2]")
-        if opt == 1:
+        if opt == "1":
             print(Df(file_reader, ))
-        elif opt == 2:
+        elif opt == "2":
             week_number = input("Enter the Week for which you want to view the data  : ")
             header = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
                       "Times Opened"]
