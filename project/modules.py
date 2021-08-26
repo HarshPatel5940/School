@@ -24,7 +24,7 @@ def show_all_users():
 
 def app_data_create(id1, app_name):
     fname = f"User{id1}-{app_name}.csv"  # For a custom file name
-    f = open(fname, 'w',newline="")
+    f = open(f"{app_data_path}/{fname}", 'w', newline="")
     fw = csv.writer(f)
     column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
               "Times Opened"]
@@ -33,7 +33,6 @@ def app_data_create(id1, app_name):
 
 
 def app_data_inserter(id1, app_name):
-
     fname = f"User{id1}-{app_name}.csv"
     f = open(f"{app_data_path}/{fname}", 'a', newline="")
     fw = csv.writer(f)
