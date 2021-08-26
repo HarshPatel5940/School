@@ -2,6 +2,7 @@ import csv
 from pandas import DataFrame as Df
 
 user_file_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data.csv"
+admin_file_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data_admin.csv"
 app_data_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data"
 
 
@@ -18,7 +19,7 @@ def show_all_users():
     file1 = open(user_file_path, 'r')
     reader = csv.reader(file1)
     for row in reader:
-        print(row)
+        print(f"{row[0]} {row[1]}  {row[2]}")
     file1.close()
 
 
@@ -54,7 +55,7 @@ def app_data_inserter(id1, app_name):
 def app_data_read(id1, app_name):
     file_name = f"User{id1}-{app_name}.csv"
     found = False
-    try: 
+    try:
         file_open = open(f"{app_data_path}/{file_name}", 'r')
         file_reader = csv.reader(file_open)
         opt = input(
@@ -75,7 +76,7 @@ def app_data_read(id1, app_name):
             print("invalid option")
     except FileNotFoundError:
         print("No Such App was Found")
-        
+
 
 def login():
     while True:
@@ -93,12 +94,39 @@ def login():
             break
         if auth is False:
             print("You Credentials Are Wrong!\nTRY AGAIN")
-            chance = input("do you want leave login page? [y] [n]")
+            chance = input("do you want leave login page? [y] [n] : ")
             if chance == "y":
                 break
             else:
                 print("invalid option! continuing login process")
     return id1
+
+
+def admin_login():
+    while True:
+        f = open(admin_file_path, 'r')
+        id1 = input("Enter Your ID: ")
+        password = input("Enter Your Password: ")
+        fr = csv.reader(f)
+        power = 1
+        auth = False
+
+        for row in fr:
+            if id1 in row and password in row:
+                power = row[2]
+                print(f"You are Authorized as {power}!")
+                auth = True
+                break
+        if auth is True:
+            break
+        if auth is False:
+            print("You Credentials Are Wrong!\nTRY AGAIN")
+            chance = input("do you want leave login page? [y] [n] : ")
+            if chance == "y":
+                break
+            else:
+                print("continuing login process")
+    return id1, power
 
 
 def sign_up():
@@ -124,9 +152,57 @@ def sign_up():
             write_user(id1, name, password)
             break
         if details_ok is False:
-            print("\nInvalid detials provided! \n")
-            chance = input("do you want leave sign-up page? [y] [n]")
+            print("\nInvalid details provided! \n")
+            chance = input("do you want leave sign-up page? [y] [n] : ")
             if chance == "y":
                 break
             else:
                 print("invalid option! continuing Sign-up process")
+
+
+def add_admin():
+    id1 = int(input("enter user id : "))
+    pwd = input("enter user password : ")
+    power = "2"
+    lst = [id1, pwd, power]
+
+    f = open(admin_file_path, "a", newline="")
+    file = csv.writer(f)
+    file.writerow(lst)
+    f.close()
+    print(f"New Admin user with id {id1} has been added! ")
+
+
+def remove_admin():
+    id1 = input("enter id of the admin u wanna remove : ")
+    before = []
+
+    with open(admin_file_path, "r", newline="") as f:
+        file = csv.reader(f)
+
+        for row in file:
+            if row[0] != id1:
+                before.append(row)
+
+    with open(admin_file_path, "w", newline="") as f:
+        file = csv.writer(f)
+        file.writerows(before)
+
+
+def update_user_data():
+    id1 = input("enter id of the admin u wanna remove : ")
+    pwd = input("enter the new password for the user : ")
+    before = []
+
+    with open(admin_file_path, "r", newline="") as f:
+        file = csv.reader(f)
+
+        for row in file:
+            if row[0] == id1:
+                row[2] = pwd
+                before.append(row)
+
+    with open(user_file_path, "w", newline="") as f:
+        file = csv.writer(f)
+        file.writerows(before)
+
