@@ -204,4 +204,3 @@ def update_user_data():
     with open(user_file_path, "w", newline="") as f:
         file = csv.writer(f)
         file.writerows(before)
-
