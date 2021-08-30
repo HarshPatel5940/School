@@ -18,8 +18,7 @@ def write_user(id11, name, password):
 def show_all_users():
     file1 = open(user_file_path, 'r')
     reader = csv.reader(file1)
-    for row in reader:
-        print(f"{row[0]} {row[1]}  {row[2]}")
+    print(Df(reader, ))
     file1.close()
 
 
