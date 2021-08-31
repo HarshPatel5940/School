@@ -37,14 +37,22 @@ def user_count():
 def apps_count(id1):
     user_file = []
     app_list = []
+    app_list_final = []
     file_list = ls(app_data_path)
     for data in file_list:
         if f"User{id1}" in data:
             user_file.append(data)
     for data in user_file:
-        data.replace(f"User{id1}-", ' ')
-        app_list.append(data)
-    print(f"Apps Tracked For User{id1} - {app_list}")
+        Lst1 = data.split('-')
+        app_list.append(Lst1[1])
+
+    for app in app_list:
+        name = app.split('.')
+        app_list_final.append(name[0])
+    if app_list_final == []:
+        print("User is Invalid or User Has No Apps Tracked")
+    else:
+        print(f"Apps Tracked For User{id1} - {app_list_final}")
 
 
 def app_data_create(id1, app_name):
