@@ -9,15 +9,15 @@ app_data_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\dat
 
 def write_user(id11, name, password):
     with open(user_file_path, "a", newline="") as f:
-        print("Data is ok")
+        print("Data Is OK")
         file = csv.writer(f)
         user_row = [id11, name, password]
         file.writerow(user_row)
-        print("New User is created")
+        print("New User Is Created!")
         
 
 
-def show_all_users(): # Suraj Pls check this and help here
+def show_all_users():
     file1 = open(user_file_path, 'r')
     reader = csv.reader(file1)
     print(Df(reader, ))
@@ -32,7 +32,7 @@ def user_count():
         users += 1
 
     users -= 1
-    print("Number of Users are ", users)
+    print("Number of Users Are ", users)
 
 
 def apps_count(id1):
@@ -53,7 +53,8 @@ def apps_count(id1):
     if app_list_final == []:
         print("User is Invalid or User Has No Apps Tracked")
     else:
-        print(f"Apps Tracked For User{id1} - {app_list_final}")
+        appcount = len(app_list_final)
+        print(f"Total Apps Tracked For User{id1} = {appcount}\n The Apps Are ---> {app_list_final}")
 
 
 def app_data_create(id1, app_name):
@@ -146,11 +147,11 @@ def login():
             break
         if auth is False:
             print("You Credentials Are Wrong!\nTRY AGAIN")
-            chance = input("do you want leave login page? [y] [n] : ")
+            chance = input("Do you want leave login page? [y] [n] : ")
             if chance == "y":
                 break
             else:
-                print("invalid option! continuing login process")
+                print("Invalid option! continuing login process....")
     return id1
 
 
@@ -166,18 +167,18 @@ def admin_login():
         for row in fr:
             if id1 in row and password in row:
                 power = row[2]
-                print(f"You are Authorized as {power}!")
+                print(f"You are Authorized as Level{power} Admin User!")
                 auth = True
                 break
         if auth is True:
             break
         if auth is False:
             print("You Credentials Are Wrong!\nTRY AGAIN")
-            chance = input("do you want leave login page? [y] [n] : ")
+            chance = input("Do you want leave login page? [y] [n] : ")
             if chance == "y":
                 break
             else:
-                print("continuing login process")
+                print("Continuing login process....")
     return id1, power
 
 
@@ -205,28 +206,28 @@ def sign_up():
             break
         if details_ok is False:
             print("\nInvalid details provided! \n")
-            chance = input("do you want leave sign-up page? [y] [n] : ")
+            chance = input("Do you want leave sign-up page? [y] [n] : ")
             if chance == "y":
                 break
             else:
-                print("invalid option! continuing Sign-up process")
+                print("Invalid option! Continuing Sign-up process....")
 
 
 def add_admin():
-    id1 = int(input("enter user id : "))
-    pwd = input("enter user password : ")
-    power = "2"
+    id1 = int(input("Enter Admin ID : "))
+    pwd = input("Enter Admin Password : ")
+    power = "2" #by default 2
     lst = [id1, pwd, power]
 
     f = open(admin_file_path, "a", newline="")
     file = csv.writer(f)
     file.writerow(lst)
     f.close()
-    print(f"New Admin user with id {id1} has been added! ")
+    print(f"New Admin User With ID{id1} Has Been Added! ")
 
 
 def remove_admin():
-    id1 = input("enter id of the admin u wanna remove : ")
+    id1 = input("Enter The ID Of The Admin You Want To Remove : ")
     before = []
 
     with open(admin_file_path, "r", newline="") as f:
@@ -242,8 +243,8 @@ def remove_admin():
 
 
 def update_user_data():
-    id1 = input("enter id of the admin u wanna remove : ")
-    pwd = input("enter the new password for the user : ")
+    id1 = input("Enter id of the admin u wanna remove : ")
+    pwd = input("Enter the new password for the user : ")
     before = []
 
     with open(admin_file_path, "r", newline="") as f:
@@ -257,3 +258,4 @@ def update_user_data():
     with open(user_file_path, "w", newline="") as f:
         file = csv.writer(f)
         file.writerows(before)
+        
