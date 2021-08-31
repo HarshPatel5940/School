@@ -36,7 +36,7 @@ while True:
                 elif ask1 == "2":
                     remove_admin()
                 elif ask1 == "3":
-                    print(f"========== {user_count()} Users =========")
+                    user_count()
                     show_all_users()
                 elif ask1 == "4":
                     update_user_data()
