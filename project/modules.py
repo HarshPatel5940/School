@@ -1,5 +1,6 @@
 import csv
 from pandas import DataFrame as Df
+from os import listdir as ls
 
 user_file_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data.csv"
 admin_file_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data_admin.csv"
@@ -15,21 +16,64 @@ def write_user(id11, name, password):
         print("New User is created")
 
 
-def show_all_users():
+def show_all_users(): # Suraj Pls check this and help here
     file1 = open(user_file_path, 'r')
     reader = csv.reader(file1)
     print(Df(reader, ))
     file1.close()
 
 
+def user_count():
+    f = open(user_file_path, "r")
+    fr = csv.reader(f)
+    users = 0
+    for row in fr:
+        users += 1
+
+    users-=1
+    print("Number of Users are ", users)
+
+
+def apps_count(id1):
+    user_file = []
+    app_list = []
+    file_list = ls(app_data_path)
+    for data in file_list:
+        if f"User{id1}" in data:
+            user_file.append(data)
+    for data in user_file:
+        data.replace(f"User{id1}-", ' ')
+        app_list.append(data)
+    print(f"Apps Tracked For User{id1} - {app_list}")
+
+
 def app_data_create(id1, app_name):
-    fname = f"User{id1}-{app_name}.csv"  # For a custom file name
-    f = open(f"{app_data_path}/{fname}", 'w', newline="")
-    fw = csv.writer(f)
-    column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
-              "Times Opened"]
-    fw.writerow(column)
-    print("File Successfully Created! ")
+    file_list = ls(app_data_path)
+
+    fname = f"User{id1}-{app_name}.csv"
+
+    if fname in file_list:
+        opt = input(
+            "WARNING!!\n-----The App Data For The Current User Has Already Been Created/Existing.\n-----Creating it Again Leads to Loss of Data\nDo you want to continue?[y]or[n] ")
+
+        if opt == 'y':
+            f = open(f"{app_data_path}/{fname}", 'w', newline="")
+            fw = csv.writer(f)
+            column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
+                      "Times Opened"]
+            fw.writerow(column)
+            print("File Successfully Created! ")
+
+        else:
+            print("--File Was Not Created--")
+
+    elif fname not in file_list:
+        f = open(f"{app_data_path}/{fname}", 'w', newline="")
+        fw = csv.writer(f)
+        column = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
+                  "Times Opened"]
+        fw.writerow(column)
+        print("File Successfully Created! ")
 
 
 def app_data_inserter(id1, app_name):
@@ -48,7 +92,7 @@ def app_data_inserter(id1, app_name):
     except ValueError:
         print("there was a value error")
 
-    print(f"\n-----Data for Week{week_no} Has Been Successfully Added!-----\n")
+    print(f"\n-----Data for Week{week_no} Has Been Successfully Added!-----\n\n")
 
 
 def app_data_read(id1, app_name):
