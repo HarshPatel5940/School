@@ -30,7 +30,7 @@ def user_count():
     for row in fr:
         users += 1
 
-    users-=1
+    users -= 1
     print("Number of Users are ", users)
 
 
