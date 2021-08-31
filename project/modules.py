@@ -14,6 +14,7 @@ def write_user(id11, name, password):
         user_row = [id11, name, password]
         file.writerow(user_row)
         print("New User is created")
+        
 
 
 def show_all_users(): # Suraj Pls check this and help here
