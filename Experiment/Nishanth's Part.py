@@ -5,6 +5,7 @@ user_file_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\da
 admin_file_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data_admin.csv"
 app_data_path = "D:\Sindhi Model School (SMS)\HARSH\.PROGRAMS\School\project\data"
 
+
 def app_data_create(id1, app_name):
 
     file_list = Ld(app_data_path)
@@ -64,8 +65,6 @@ def app_data_inserter(id1, app_name):
         print("Maximum Weeks Reached!")
 
 
-    print(f"\n-----Data for Week{week_no} Has Been Successfully Added!-----\n")
-
 def user_count():
     f = open(user_file_path,"r")
     fr = csv.reader(f)
@@ -73,6 +72,7 @@ def user_count():
     for row in fr:
         users += 1
     return users
+
 
 def apps_count(id):
     userfilelist = []
@@ -85,5 +85,3 @@ def apps_count(id):
         data.replace(f"User{id}-",'')
         appslist.append(data)
     print(f"Apps Tracked For User{id} = {appslist}")
-
-#usercount and apps tracked added : )
