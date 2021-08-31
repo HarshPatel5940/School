@@ -85,3 +85,5 @@ def apps_count(id):
         data.replace(f"User{id}-",'')
         appslist.append(data)
     print(f"Apps Tracked For User{id} = {appslist}")
+
+#usercount and apps tracked added : )
