@@ -33,7 +33,7 @@ def user_menu():
 4) Add tracking data to an existing app
 5) {colored("Update User Password", 'magenta')}
 6) Logout User
-What you want to do [1] [2] [3] [4] : """
+What you want to do [1] [2] [3] [4] [5] [6] : """
     return x
 
 
