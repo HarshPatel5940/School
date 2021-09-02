@@ -31,7 +31,7 @@ def user_menu():
 2) Create new app tracking
 3) Read tacking data of an app
 4) Add tracking data to an existing app
-5) {colored("Update User Password", 'red')}
+5) {colored("Update User Password", 'magenta')}
 6) Logout User
 What you want to do [1] [2] [3] [4] : """
     return x
@@ -371,6 +371,12 @@ def admin_password_update():
 def user_password_update(id1):
     auth = False
     pass1 = True
+    cprint("""
+Note:
+    Password cannot be empty
+    Password can't start with a space
+    Password cannot contain commas
+    Password should be minimum 8 characters""", 'red')
 
     old_password = input("Enter the old password : ")
     pwd = input("Enter the new password : ")
