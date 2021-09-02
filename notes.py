@@ -2,6 +2,30 @@ from timeit import default_timer as timer
 
 start = timer()
 
+# Things Learnt From Project
+"""
+    => For God Sake don't hesitate to use multi line strings
+    
+    => Colored Text ( from termcolor import colored, cprint )
+    
+    => invoking terminal for color text to work in terminal ()
+        from os import system
+        system("")
+        
+    => carriage return (\r) with end=""
+        carriage return is good in certain scenarios but makes problem 
+        when the replacing string is shorter than exsisting string
+        
+    => 
+    
+
+    ============================== Useless story ===============================
+    *cough*  did not knew what to do and i was not satisfied with "\n method" and 
+    i thought using multi line stings will not be that good but *ah ah* it did help \100 times
+    it helped a lot in cleaning out my code and now i don;t hesitate to use multi-line strings
+"""
+
+
 # File Handling
 """
 file Opening Modes : r  w  a  w+  a+  ab  wb  ab+  wb+
