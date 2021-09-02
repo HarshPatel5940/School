@@ -1,7 +1,10 @@
 from Modules import *
-from os import system
-print("xxxxxxxxxxxxxxxx DEVICE USAGE TRACKER xxxxxxxxxxxxxxxx\n\n")
-system("")
+import os
+
+
+os.system("")
+print(color("xxxxxxxxxxxxxxxx DEVICE USAGE TRACKER xxxxxxxxxxxxxxxx\n\n"))
+
 
 while True:
     ask1 = input(app_menu())
@@ -24,6 +27,7 @@ while True:
                 user_password_update(id1)
             elif task == "6":
                 log_out()
+                os.system("cls")
                 break
             else:
                 invalid_option()
