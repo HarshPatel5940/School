@@ -29,8 +29,8 @@ def user_menu():
 {color("===================== Authorised User MENU =====================")}
 1) Show all apps
 2) Create new app tracking
-3) Add tracking data to an existing app
-4) Read tacking data of an app
+3) Read tacking data of an app
+4) Add tracking data to an existing app
 5) {colored("Update User Password", 'red')}
 6) Logout User
 What you want to do [1] [2] [3] [4] : """
