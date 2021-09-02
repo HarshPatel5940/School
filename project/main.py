@@ -1,6 +1,10 @@
 from modules import *
+import os
 
-print("xxxxxxxxxxxxxxxx DEVICE USAGE TRACKER xxxxxxxxxxxxxxxx\n\n")
+
+os.system("")
+print(color("xxxxxxxxxxxxxxxx DEVICE USAGE TRACKER xxxxxxxxxxxxxxxx\n\n"))
+
 
 while True:
     ask1 = input(app_menu())
