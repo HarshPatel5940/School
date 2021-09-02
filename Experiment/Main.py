@@ -1,34 +1,92 @@
-import Modules
+from Modules import *
+from os import system
+print("xxxxxxxxxxxxxxxx DEVICE USAGE TRACKER xxxxxxxxxxxxxxxx\n\n")
+system("")
 
-print("========================== DEVICE USAGE TRACKER ==========================")
 while True:
-    opt1 = int(input("------ MENU - 1 ------\nSelect The Task You Wanna Perform: \n1) Register \n2) Login\nEnter Your Option [1]or[2]: "))
-    if opt1 == 1:
-        Modules.signup()
-    elif opt1 == 2:
-        Modules.login()
-    opt2 = int(input("------------------------XXXXXXXXXXXXXXX------------------------\n1)Previous Menu\n2)Next Menu\nYour Option [1]or[2]: "))
-    if opt2 == 1:
-        continue
-    elif opt2 == 2:
-        break
-id1 = input("Re-Enter Your ID: ")
-while True:
-    print("------------- HOME -------------")
-    opt3 = int(input("Select The Task You Wanna Perform:\n1) Add Data \n2) View Data\nYour Option [1]or[2]: "))
-    if opt3 == 1:
+    ask1 = input(app_menu())
+    if ask1 == "1":
+        id1 = login()
         while True:
-            print("=========== Data Inserter/Creater ===========")
-            opt4 = int(input("Select The Task you Wanna Perform:\n1)Insert Data Into A File\n2)Create A File\nYour Option [1]or[2]: "))
-            if opt4 == 1:
-                app_name = input("Enter the App Name For Which You Wanna Insert The Data(in lower case): ")
-                Modules.datainserter(id1, app_name)
-            elif opt4 == 2:
-                print("Note: Only CSV Files Are Created")
-                app_name = input("Enter the App Name For Which You Wanna Create Data(in lower case): ")
-                Modules.csvfilecreate(id1, app_name)
-            opt5 = int(input("Select The Task you Wanna Perform:\n1) Run 'Data Inserter/Creater' Again\n2) Exit 'Data Inserter/Creater'\nYour Option [1]or[2]: "))
-            if opt5 == 1:
-                continue
-            elif opt5 == 2:
+            task = input(user_menu())
+            if task == "1":
+                apps_count(id1)
+            elif task == "2":
+                app = input("Enter the name of the app you want to create : ")
+                app_data_create(id1, app)
+            elif task == "3":
+                app = input("Enter the name of the app you want to read data: ")
+                app_data_read(id1, app)
+            elif task == "4":
+                app = input("Enter the name of the app you want to add data: ")
+                app_data_inserter(id1, app)
+            elif task == "5":
+                user_password_update(id1)
+            elif task == "6":
+                log_out()
                 break
+            else:
+                invalid_option()
+                pass
+    elif ask1 == "2":
+        tup = admin_login()
+        id1 = tup[0]
+        power = tup[1]
+
+        if power == "3":
+            while True:
+                ask1 = input(owner_menu())
+                if ask1 == "1":
+                    add_admin()
+                elif ask1 == "2":
+                    remove_admin()
+                elif ask1 == "3":
+                    user_count()
+                    show_all_users()
+                elif ask1 == "4":
+                    admin_password_update()
+                elif ask1 == "5":
+                    show_all_admins()
+                elif ask1 == "6":
+                    try:
+                        id1 = int(input("Enter the user id you want to show apps : "))
+                        apps_count(id1)
+                    except ValueError:
+                        print("Invalid id")
+                elif ask1 == "7":
+                    log_out()
+                    break
+                else:
+                    invalid_option()
+                    pass
+
+        elif power == "2":
+            while True:
+                ask1 = input(admin_menu())
+                if ask1 == "1":
+                    user_count()
+                    show_all_users()
+                elif ask1 == "2":
+                    admin_password_update()
+                elif ask1 == "3":
+                    try:
+                        id1 = int(input("Enter the user ID for which you want to show apps : "))
+                        apps_count(id1)
+                    except ValueError:
+                        print("Invalid id!!")
+                elif ask1 == "4":
+                    log_out()
+                    break
+                else:
+                    invalid_option()
+                    pass
+        else:
+            invalid_option()
+    elif ask1 == "3":
+        sign_up()
+    elif ask1 == "4":
+        closing()
+        break
+    else:
+        invalid_option()
+        pass
