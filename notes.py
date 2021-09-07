@@ -13,10 +13,10 @@ start = timer()
         system("")
         
     => carriage return (\r) with end=""
-        carriage return is good in certain scenarios but makes problem 
+        carriage return is good in certain scenarios but makes problem in terminal (output mode completely fine)
         when the replacing string is shorter than exsisting string
         
-    => 
+    => os.system("cls") invoke terminal commands which can help to clear screen after a fnc completed
     
 
     ============================== Useless story ===============================

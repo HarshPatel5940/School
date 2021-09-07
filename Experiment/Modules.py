@@ -1,5 +1,6 @@
 import csv
 from pandas import DataFrame as Df
+import os
 from os import listdir as ls
 from termcolor import colored, cprint  # @nishanth & @ suraj ** REQUIRE : pip install termcolor **
 
@@ -71,8 +72,7 @@ def log_out():
 
 
 def closing():
-    cprint("Closing...", "cyan")
-
+    cprint("App Closed", "cyan")
 
 def file_exsist_warning():
     x = colored("""
@@ -196,11 +196,13 @@ def app_data_read(id1, app_name):
         opt = input(
             "Select The Task\n1) Read Full Data\n2) Read Particular Week\nYour Option [1]or[2] : ")
         if opt == "1":
+            os.system("cls")
             print(Df(file_reader, ))
         elif opt == "2":
             week_number = input("Enter the Week for which you want to view the data  : ")
             header = ["Week Number", "Usage Duration(mins)", "Battery Consumptions(%)", "Data Consumption(in MB)",
                       "Times Opened"]
+            os.system("cls")
             for row in file_reader:
                 if f"Week{week_number}" == row[0]:
                     print(Df(row, header))
@@ -300,17 +302,21 @@ def admin_login():
         for row in fr:
             if id1 in row and password in row:
                 power = row[2]
+                os.system("cls")
                 print(f"You are Authorized as Level {power} Admin User!")
                 auth = True
                 break
         if auth is True:
             break
         if auth is False:
-            cprint("You Credentials Are Wrong!" , 'red')
+            cprint("You Credentials Are Wrong!", 'red')
             chance = input("Do you want leave login page? [y] [n] : ")
             if chance == "y":
+                os.system("cls")
+                print("left login page")
                 break
             else:
+                os.system("cls")
                 print("Continuing login process....")
     return id1, power
 
@@ -325,6 +331,7 @@ def add_admin():
     file = csv.writer(f)
     file.writerow(lst)
     f.close()
+    os.system("cls")
     print(f"New Admin User With ID{id1} Has Been Added! ")
 
 
@@ -342,7 +349,7 @@ def remove_admin():
     with open(admin_file_path, "w", newline="") as f:
         file = csv.writer(f)
         file.writerows(before)
-
+    os.system("cls")
     print(f"Admin User With ID{id1} Has Been Removed! ")
 
 
@@ -364,7 +371,7 @@ def admin_password_update():
     with open(user_file_path, "w", newline="") as f:
         file = csv.writer(f)
         file.writerows(before)
-
+    os.system("cls")
     cprint("User Password Updated Successfully", 'green')
 
 
@@ -384,7 +391,7 @@ Note:
 
     f = open(user_file_path, 'r')
     fr = csv.reader(f)
-
+    os.system("cls")
     for row in fr:
         if id1 in row and old_password in row:
             auth = True

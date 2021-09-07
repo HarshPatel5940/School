@@ -10,6 +10,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\project\data\User1234-discord.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\project\data\User7777-insta.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\project\data_admin.csv">
           <value>
             <Attribute>
