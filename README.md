@@ -8,4 +8,4 @@
 >[![](https://img.shields.io/static/v1?label=HARSHPATEL&logo=twitter&message=Follow&color=blue)](https://twitter.com/intent/follow?screen_name=HarshPatelN1)
 >[![](https://img.shields.io/static/v1?label=Fiver&logo=youtube&message=Follow&color=lime)](https://www.fiverr.com/share/r90egx)
 
-totally not addicted to python 🤐🥲
+totally not addicted to python 😅
