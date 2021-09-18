@@ -19,3 +19,8 @@ console.log(a);
 console.log("All the mathematical operations are similar in js to python");
 
 console.log("")
+
+
+// part 3 
+// Comparisons and Conditionals
+

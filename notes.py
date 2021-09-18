@@ -2,6 +2,9 @@ from timeit import default_timer as timer
 
 start = timer()
 
+
+print("ALL THE NOTES YOU NEED TO LEARN PYTHON")
+
 # File Handling
 """
 file Opening Modes : r  w  a  w+  a+  ab  wb  ab+  wb+
