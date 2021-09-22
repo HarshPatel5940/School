@@ -72,3 +72,26 @@ if count==0:
     print("## Sorry! ",word," not present ")
 else:
     print("## ",word," occurs ",count," times ")
+
+#======================= exp : 5
+#Program to find the occurence of any word in a string
+from random import randint
+from time import sleep
+
+play = 'y'
+print("Press Ctrl+C to stop the dice")
+
+while True:
+    try:
+        while True:
+            n = randint(1, 6)
+            print(f"\rrolling ==> {n}",end="")
+            sleep(0.2)
+    except KeyboardInterrupt:
+        print(f"\n\nYour Number is {n}")
+        ans = input("Do you wanna stop [y] [n] : ")
+        if ans == "y":
+            break
+        else:
+            print("Starting new game")
+            

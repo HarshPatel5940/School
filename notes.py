@@ -6,8 +6,10 @@ start = timer()
 print("ALL THE NOTES YOU NEED TO LEARN PYTHON")
 
 # File Handling
+# r+ mode esist check niv discord chat (https://discord.com/channels/@me/852865867607703583/875624566075031602)
+# r+ similar as r does not create file when esist
 """
-file Opening Modes : r  w  a  w+  a+  ab  wb  ab+  wb+
+file Opening Modes : r  w  a  r+ w+  a+  ab  wb  ab+  wb+  
 
 General Methods:
     open()                        used to open the file
