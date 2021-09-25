@@ -7,7 +7,7 @@ print("ALL THE NOTES YOU NEED TO LEARN PYTHON")
 
 # File Handling
 # r+ mode esist check niv discord chat (https://discord.com/channels/@me/852865867607703583/875624566075031602)
-# r+ similar as r does not create file when esist
+
 """
 file Opening Modes : r  w  a  r+ w+  a+  ab  wb  ab+  wb+  
 
@@ -33,22 +33,7 @@ csv: (import csv)
     .writerow(row)                 used to write a single row or column name
     .writerows(list_row)           used to write multiple rows using nested list
 
-example :
-    file1 = open(file_path, 'a', newline='')
-    writer = csv.writer(file1)
-    n1 = 1
-    try:
-        while n1 <= count:
-            print(f"student {n1}\n")
-            roll_no = int(input("enter students roll no : "))
-            name = input("enter your name : ")
-            marks = input("enter your marks : ")
-            row = [roll_no, name, marks]
-            writer.writerow(row)
-            print("done")
-            n1 += 1
-    except ValueError:
-        print("There was a Value error")
+
     
 """
 # Functions, error handling & Importing

@@ -1,3 +1,16 @@
+print("some practice questions based from practical board exams")
+
+#======================= Miscllaneous
+# Bubble Sorting Lesson
+
+l1 = [42, 29, 74, 11, 65, 59]
+n = len(l1)
+print("Original list", l1)
+for i in range(n - 1):
+    for j in range(n - i - 1):
+        if l1[j] > l1[j + 1]:
+            l1[j], l1[j + 1] = l1[j + 1], l1[j]
+        print("sorted list", l1)
 
 #======================= exp : 1
 # Program to calculate factorial of entered number
@@ -73,8 +86,8 @@ if count==0:
 else:
     print("## ",word," occurs ",count," times ")
 
-#======================= exp : 5
-#Program to find the occurence of any word in a string
+#======================= exp : 6
+#Program to roll a dice using carriage return
 from random import randint
 from time import sleep
 
