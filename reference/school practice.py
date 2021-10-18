@@ -1,3 +1,26 @@
+print("Some programs")
+
+# ! Random from a specific list example
+"""
+from random import choice
+
+lst = ["Tanay", "Rudra", "Harsh", "Vrinda"]
+td = ["Truth", "dare"]
+continue1 = "y"
+while continue1 == "y":
+    a = choice(lst)
+    b = choice(lst)
+    c = choice(td)
+    if a != b:
+        print(
+            f"aksing {a}\nanswering {b} -- will do {c} \n ============================="
+        )
+        ask = input("Do you wanna continue [y] [n]:")
+        if ask == "n":
+            continue1 = "n"
+    else:
+        continue
+"""
 
 # method 1 "descending order"
 
@@ -416,7 +439,7 @@ print(" \n ------------------------- \n ")
 
 # DESIGNS
 
-print('done by HARSH N Patel ,  class (XI-A)')
+print("done by HARSH N Patel ,  class (XI-A)")
 
 # design 1
 """
@@ -428,7 +451,7 @@ while n1 < 5 :
     n1 += 1
 """
 
-#design 2
+# design 2
 """
 print("-------  design 2  ----------")
 str2 = "*"
@@ -439,7 +462,7 @@ while n2 <= 5:
     n2 += 1
 
 """
-#design 3
+# design 3
 """
 print("-------  design 3  ----------")
 str3 = "*"
@@ -453,7 +476,7 @@ while n3_1 <= 5:
     n3_2 -= 1
 """
 
-#design 4
+# design 4
 """
 print("-------  design 4  ----------")
 str4 = "*"
@@ -467,7 +490,7 @@ while n4_1 <= 9 :
     n4_2 -= 1
 """
 
-#design 4
+# design 4
 """
 print("-------  design 4  ----------")
 n=5 
@@ -481,7 +504,7 @@ for i in range(0, n):
             print("* ", end="") 
         print("\r") 
 """
-#design 5
+# design 5
 """
 print("-------  design 5  ----------")
 n=6 
@@ -493,7 +516,7 @@ for i in range(1,n):
     print() 
 """
 
-#design 6
+# design 6
 """
 print("-------  design 6  ----------")
 n=6 

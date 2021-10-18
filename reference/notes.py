@@ -33,8 +33,6 @@ csv: (import csv)
     .writerow(row)                 used to write a single row or column name
     .writerows(list_row)           used to write multiple rows using nested list
 
-
-    
 """
 # Functions, error handling & Importing
 """

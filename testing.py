@@ -1,9 +1,9 @@
+print("the following comments are writen to test a extension - better comments")
+
 # Trial Running of Single programs
-from os import system as cmd
-
-# this works unexpectedly well Lol
-
-f = open("./wat the.py", "a")
-f.write('print("Hello World")\n')
-f.close()
-cmd('python "wat the.py"')
+# * test
+# ! test alert
+# ? test question
+# @param works inside casses or fnc
+# TODO we need to work on this
+# // striked out commets!!!
