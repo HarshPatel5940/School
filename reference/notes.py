@@ -33,6 +33,17 @@ csv: (import csv)
     .writerow(row)                 used to write a single row or column name
     .writerows(list_row)           used to write multiple rows using nested list
 
+Modes:
+    -> r        read txt files
+    -> rb       read binary files (.bat)
+    -> r+       read and writes a files
+    -> w        creates or writes files
+    -> w+       writing and reading the file
+    -> w+       writing and reading binary files
+    -> a        appends the data in end of the file
+    -> a+       creates or appends the data in the file
+    -> ab+      creates or appends the data in the binary file
+
 """
 # Functions, error handling & Importing
 """
@@ -48,7 +59,7 @@ Functions:
         <fnc_name>(arguments)            used to Call Your Function with arguements
 
         return a                         used to return a single line value
-        return a,b                       used to return multiple values
+        return a,b                       used to return multiple values i tuple
 
     from <filename> import <function>    Used to import functions from a specific file 
     from file import <function> as <var> used to give aliases name to the module or functions
