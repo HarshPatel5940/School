@@ -1,6 +1,5 @@
 # School
-### A Repository to keep a track of my School projects
-
+### A Repository to keep a track of my School things and Noting it down
 ### print("Hello World") 👋
 
 >[![](https://img.shields.io/static/v1?label=HARSHPATEL&logo=github&message=Follow&color=orange)](https://github.com/HarshPatel5940)
