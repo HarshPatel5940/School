@@ -1,4 +1,4 @@
-# School (ARCHIVED)
+# School (ARCHIVED) NOT BEING USED
 ### A Repository to keep a track of my School things and Noting it down
 ### print("Hello World") 👋
 
